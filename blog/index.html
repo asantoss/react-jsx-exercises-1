@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Page Title</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 		<script
 			crossorigin
 			src="https://unpkg.com/react@16/umd/react.development.js"
@@ -14,45 +14,11 @@
 			crossorigin
 			src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
 		></script>
-		<!-- <script src="app.js" type="text/babel"></script> -->
+		<script src="app.js" type="text/babel"></script>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
 		<div id="root"></div>
 	</body>
-	<script>
-		class HelloWorld extends React.Component {
-			constructor(props) {
-				super(props);
-				this.state = {
-					count: 0,
-				};
-			}
-
-			handleClick = () => {
-				this.setState((state) => {
-					return {
-						count: state.count + 1,
-					};
-				});
-			};
-
-			render() {
-				return React.createElement(
-					'div',
-					null,
-					React.createElement(
-						'h1',
-						null,
-						`Hello World this is a counter ${this.state.count}`
-					),
-					React.createElement('button', { onClick: this.handleClick }, 'Add')
-				);
-			}
-		}
-		ReactDOM.render(
-			React.createElement(HelloWorld, null, null),
-			document.getElementById('root')
-		);
-	</script>
 </html>

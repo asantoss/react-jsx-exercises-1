@@ -11,6 +11,8 @@ let FirstComponentWithJSX = () => {
 	);
 };
 
+ReactDOM.render(<FirstComponentWithJSX />, document.getElementById('root'));
+
 ///This is how we would solve it without JSX. This way is alot more code and thus the reason why JSX was born!
 const FirstComponent = () => {
 	///Our component is a function that returns some instructions for react to create some markup.
@@ -20,12 +22,7 @@ const FirstComponent = () => {
 		'div',
 		//The second argument are the props we are passing down, or Properties.
 		{
-			style: {
-				display: 'flex',
-				flexWrap: 'wrap',
-				width: '250px',
-				height: '150px',
-			},
+			class: 'windows_logo',
 		},
 
 		//Since our the root element of this component is a div, we can pass multiple children to it.
@@ -74,12 +71,10 @@ const FirstComponent = () => {
 };
 
 //We will achieve the exact same result if we call it as firstComponent or First Component with jsx..
+// ReactDOM.render(
+// 	React.createElement('div', null, FirstComponent()),
+// 	document.getElementById('root')
+// );
 
 //THIS WILL RENDER TWO WINDOWS LOGOS
-ReactDOM.render(
-	<div>
-		<FirstComponent />
-		<FirstComponentWithJSX />
-	</div>,
-	document.getElementById('root')
-);
+// ReactDOM.render(<FirstComponentWithJSX />, document.getElementById('root'));

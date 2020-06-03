@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	height: 10vh;
+	align-items: center;
+	padding: 1rem;
+}
+
+.header-navlinks {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	width: 50%;
+}
+.header-navlinks > li {
+	display: inline;
+}
+.title {
+	text-align: center;
+}
+article {
+	margin: 1em;
+	padding: 1rem;
+	font-size: 1.25rem;
+}
+
+footer {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+}
+.footer-links {
+	list-style: none;
+	width: 33%;
+}
+.footer-links > li {
+	margin: 1rem;
+}
